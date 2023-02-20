@@ -4,70 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.scss">
     <title>ITCON</title>
 </head>
 <body>
+
     <header>
-        <div class="logo"></div>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+        <div class="logo_container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Логотип">
+            </div>
+            <nav class="header">
+                <a href="#about-us">О нас</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#guarantees">Наши гарантии</a>
+                <a href="#specialists">Специалисты</a>
+                <a href="#contacts">Связь с нами</a>
+            </nav>
+        </div>
     </header>
+
     <div class="banner">
-        <h1></h1>
+        <div class="banner_container">
+            <h1 class="banner_header">IT консалтинг для бизнеса и заказная разработка программного обеспечения</h1>
+        </div>
     </div>
-    <div class="about-us">
-        <div class="abut-us_info">
-            <h2 class="about-us_info_header"></h2>
-            <div class="about-us_info_content">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+
+    <div name="about-us" class="about-us">
+        <div class="about-us_container">
+            <div class="abut-us_info">
+                <h2 class="about-us_info_header">О нас</h2>
+                <div class="about-us_info_content">
+                    <p>Компания itCon создана в 2022 году для решения задач по подбору высококвалифицированных программистов и It-консалтинга учредителями компаний Codeinspiration.pro, ООО «БайПро» (www.bypro.by ). В г. Смоленске создан филиал для удобства работы с российскими заказчиками ООО «РоСа».</p>
+                    <p>Компания CodeInspiration: </p>
+                    <p>Работает с 2018-го года, за это время было реализовано множество проектов для заказчиков из ближнего и дальнего зарубежья. Компания специализируется на мобильный и веб-приложениях, нагруженных проектах, автоматизации бизнес-процессов. </p>
+                    <p>Наша команда профессионалов выполняет услуги по разработке, а также поддержке и сопровождению проектов благодаря нашей слаженной команде DevOps. </p>
+                </div>
+            </div>
+            <div class="about-us_partners">
+                <h2 class="about-us_partners_header">Нашим сотрудникам доверяют</h2>
+                <div class="about-us_partners_content">
+                    <div class="partner_logo"></div>
+                    <div class="partner_logo"></div>
+                    <div class="partner_logo"></div>
+                    <div class="partner_logo"></div>
+                    <div class="partner_logo"></div>
+                    <div class="partner_logo"></div>
+                </div>
             </div>
         </div>
-        <div class="about-us_partners">
-            <h2 class="about-us_partners_header"></h2>
-            <div class="about-us_partners_content">
-                <div class="partner_logo"></div>
-                <div class="partner_logo"></div>
-                <div class="partner_logo"></div>
-                <div class="partner_logo"></div>
-                <div class="partner_logo"></div>
-                <div class="partner_logo"></div>
+    </div>
+
+    <div name="advantages" class="advantages">
+        <div class="advantages_container">
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Экономия времени на поиск сотрудников</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Высококвалифицированные сотрудники из Парка Высоких Технологий</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Обеспечение дефицитными специалистами</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Компания из Беларуси с открытой дочерней компанией в Смоленске</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Не привязаны к определенной локации и эффективно работаем онлайн</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage_icon"></div>
+                <p class="advantage_content">Решение проблем с подбором сотрудников</p>
             </div>
         </div>
     </div>
-    <div class="advantages">
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
-        </div>
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
-        </div>
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
-        </div>
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
-        </div>
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
-        </div>
-        <div class="advantage">
-            <div class="advantage_icon"></div>
-            <p class="advantage_content"></p>
+
+    <div name="guarantees" class="guarantees">
+        <div class="guarantees_container">
+            <h2 class="guarantees_header">Наши гарантии</h2>
+            <div class="guarantee">
+                <div class="guarantee_icon"><img src="assets/guarantee_1.png" alt="Картинка"></div>
+                <div class="guarantee_content">Быстро подбираем нужных вам сотрудников</div>
+            </div>
+            <div class="guarantee">
+                <div class="guarantee_icon"><img src="assets/guarantee_2.png" alt="Картинка"></div>
+                <div class="guarantee_content">Предоставляем специалистов с опытом решения необходимых вам задач</div>
+            </div>
+            <div class="guarantee">
+                <div class="guarantee_icon"><img src="assets/guarantee_3.png" alt="Картинка"></div>
+                <div class="guarantee_content">Работаем со всем рынком</div>
+            </div>
         </div>
     </div>
-    <div class="guarantees"></div>
+
+    <div name="specialists" class="specialists">
+        <div class="specialists_container">
+            <h2 class="specialists_header">Опыт наших специалистов</h2>
+            <ul class="specialists_left-column">
+                <li>Разработка социальных приложений</li>
+                <li>Проекты по отправке и обработке сообщений</li>
+                <li>Gambling</li>
+                <li>Интернет-коммерция</li>
+                <li>Разработка мобильных приложений (social, dating)</li>
+                <li>Обработка финансовых операций</li>
+            </ul>
+            <ul class="specialists_right-column">
+                <li>Работа с ботами в telegram</li>
+                <li>Интеграция с CRM (amo, bitrix24)</li>
+                <li>Интеграция с платежными системами</li>
+                <li>Интеграция с различными API</li>
+                <li>Разработка API</li>
+            </ul>
+        </div>
+    </div>
+
+    <div name="contacts" class="contacts">
+        <div class="contacts_container">
+            <h2 class="contacts_header">Контакты</h2>
+            <div class="contacts_adress">
+                <h4 class="contacts_adress_header">Адрес:</h4>
+                <p class="contacts_adress_content">Российская Федерация, 214006, г. Смоленск, ул. Чкалова, д.6А, офис Р 48.</p>
+            </div>
+            <div class="contacts_phone">
+                <h4 class="contacts_phone_header">Телефон:</h4>
+                <a href="" class="contacts_phone_content">+7 927 557-98-64</a>
+            </div>
+            <div class="contacts_mail">
+                <h4 class="contacts_mail_header">Почта:</h4>
+                <a href="" class="contacts_mail_content">saenko.ns@yandex.by</a>
+            </div>
+            <div class="contacts_social">
+                <h4 class="contacts_social_header">Наши соц.сети:</h4>
+                <div class="contacts_social_content">
+                    <img src="assets/social_wa.png" alt="WhatsApp">
+                    <img src="assets/social_tg.png" alt="Telegram">
+                    <img src="assets/social_vb.png" alt="Viber">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_info">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Логотип">
+                </div>
+                <div class="footer_pay">
+                    <p class="company-name">ООО «РоСа»</p>
+                    <p class="footer_pay_info">ОГРН 1226700020931, ИНН 6732238651, КПП 673201001.
+                        р/с 40702810159000019046 в ПАО Сбербанк, к/с 30101810000000000632, БИК: 046614632.</p>
+                </div>
+                <p class="compliment">Сайт был разработан группой студентов.</p>
+            </div>
+            <nav class="footer">
+                <a href="#about-us">О нас</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#guarantees">Наши гарантии</a>
+                <a href="#specialists">Специалисты</a>
+                <a href="#contants">Связь с нами</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
