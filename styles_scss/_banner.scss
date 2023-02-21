@@ -1,0 +1,13 @@
+.banner{
+    width: 100%;
+    height: px2v(862);
+    background-image: url("/assets/banner.png");
+    .banner_container{
+        padding: 10%;
+        h1{
+            color: #fff;
+            font-weight: 700;
+            font-size: px2v(70);
+        }
+    }
+}

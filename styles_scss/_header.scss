@@ -1,0 +1,20 @@
+header{
+    .header_container{
+        width: 90%;
+        margin: 0 auto;
+        color: #002361;
+        font-weight: 400;
+        font-size: px2v(27);
+        display: flex;
+        align-items: center;
+        gap: px2v(280);
+        .logo{
+            height: px2v(90);
+            width: px2v(190);
+        }
+        nav{
+            display: flex;
+            gap: px2v(90);
+        }
+    }
+}
