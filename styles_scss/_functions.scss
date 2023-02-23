@@ -1,3 +1,3 @@
 @function px2v($size){
-    @return calc($size / 1920) * 100vw
+    @return calc($size / 1920) * 100vw;
 }

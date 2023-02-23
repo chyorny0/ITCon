@@ -8,6 +8,11 @@
     margin: auto;
 }
 
+@mixin container_85{
+    width: 85%;
+    margin: auto;
+}
+
 @mixin secondary_bc{
     background-color: #2668DA;
 }
