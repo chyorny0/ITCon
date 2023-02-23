@@ -1,0 +1,28 @@
+@mixin container_90{
+    width: 90%;
+    margin: auto;
+}
+
+@mixin container_75{
+    width: 75%;
+    margin: auto;
+}
+
+@mixin secondary_bc{
+    background-color: #2668DA;
+}
+
+@mixin secondary_color{
+    color: #fff;
+}
+
+@mixin header{
+    font-weight: 600;
+    font-size: px2v(40);
+    text-align: center;
+}
+
+@mixin section_size($width,$height){
+    width: px2v($width);
+    height: px2v($height);
+}

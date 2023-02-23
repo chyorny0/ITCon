@@ -1,0 +1,36 @@
+.specialists{
+    @include section_size(1920,1022);
+    @include secondary_bc;
+    .specialists_container{
+        @include container_75;
+        .specialists_header{
+            @include header;
+            @include secondary_color;
+            margin: px2v(176) 0 px2v(104);
+        }
+        .specialists_columns{
+            display: flex;
+            gap: px2v(130);
+            .specialists_column{
+                li{
+                    @include secondary_color;
+                    font-weight: 500;
+                    font-size: px2v(25);
+                    margin-bottom: px2v(45);
+                }
+                li::before{
+                    content:"";
+                    display: inline-block;
+                    width: px2v(20);
+                    height: px2v(20);
+                    border-radius: 50%;
+                    background-color: #fff;
+                    margin-right: px2v(35);
+                }
+            }
+            .specialists_column:first-child{
+                width: px2v(780);
+            }
+        }
+    }
+}

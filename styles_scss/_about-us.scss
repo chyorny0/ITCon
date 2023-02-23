@@ -1,0 +1,62 @@
+.about-us{
+    @include section_size(1920,972);
+    .about-us_container{
+        @include container_90;
+        display: flex;
+        gap: px2v(125);
+        .about-us_info{
+            width: 50%;
+            .about-us_info_header{
+                @include header;
+                margin: px2v(170) 0 px2v(40);
+            }
+            .about-us_info_content{
+                font-weight: 500;
+                font-size: px2v(27);
+            }
+        }
+        .about-us_partners{
+            width: 50%;
+            .about-us_partners_header{
+                @include header;
+                margin: px2v(170) 0 px2v(40);
+            }
+            .about-us_partners_content{
+                display: flex;
+                flex-wrap: wrap;
+                img:nth-child(1n){
+                    width: px2v(270.51);
+                    height: px2v(101.69);
+                    margin-right: px2v(71.69);
+                    margin-bottom: px2v(76.11);
+                }
+                img:nth-child(2n){
+                    width: px2v(172.56);
+                    height: px2v(93.68);
+                    margin-right: px2v(71.69);
+                    margin-bottom: px2v(80.29);
+                }
+                img:nth-child(3n){
+                    width: px2v(145.72);
+                    height: px2v(93.68);
+                    margin-right: 0;
+                    margin-bottom: px2v(88.9);
+                }
+                img:nth-child(4n){
+                    width: px2v(276.22);
+                    height: px2v(81.84);
+                    margin-right: px2v(53.56);
+                }
+                img:nth-child(5n){
+                    width: px2v(195.96);
+                    height: px2v(82.21);
+                    margin-right: px2v(41.1);
+                }
+                img:nth-child(6n){
+                    width: px2v(205.21);
+                    height: px2v(65.29);
+                }
+            }
+        }
+    }
+}

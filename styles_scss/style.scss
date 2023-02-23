@@ -1,65 +1,25 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    font-family: RubikRegular;
-    color: #002361;
-    text-decoration: none;
-    user-select: none;
-}
+@import './functions';
 
-a {
-    color: #002361;
-    position: relative;
-    cursor: pointer;
-}
-a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background-color: #002361; 
-    transition: width 0.5s;
-}
+@import './mixins';
 
-a:hover:after {
-    content: "";
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    height: 2px;
-    background-color: #002361;
-    transition: width 0.5s;
-}
+@import './a';
 
-@function px2v($size){
-    @return $size/1920*100vw
-}
+@import './reset';
 
+@import './about-us';
 
-@import './about-us'; // -
+@import './advantages';
 
-@import './advantages'; // -
+@import './banner';
 
-@import './banner'; // -
+@import './contacts';
 
-@import './contants'; // -
+@import './footer';
 
-@import './footer'; // -
+@import './guarantees';
 
-@import './guarantees'; // -
+@import './header';
 
-@import './header'; // -
+@import './specialists';
 
-@import './specialists'; // -
-
-@font-face {
-    font-family: "RubikRegular"; 
-    src: url("/fonts/Rubik-Regular.ttf") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-    }
+@import './fonts';

@@ -1,0 +1,33 @@
+.guarantees{
+    @include section_size(1920,1006);
+    .guarantees_container{
+        @include container_90;
+        .guarantees_header{
+            @include header;
+            padding: px2v(174) 0 px2v(90);
+        }
+        .guarnees_content{
+            display: flex;
+            gap: px2v(100);
+            .guarantee{
+                width: px2v(500);
+                height: px2v(420);
+                text-align: center;
+                margin: 0 45px 40px 0;
+                border: px2v(3) solid #002361;
+                box-shadow: px2v(10) px2v(4) px2v(45) rgba(38, 104, 218, 0.31);
+                border-radius: px2v(25);
+                overflow-y: hidden;
+                .guarantee_icon{
+                    width: px2v(214);
+                    height: px2v(214);
+                    margin: px2v(60) 0 px2v(20) 0;
+                }
+                .guarantee_content{
+                    font-weight: 500;
+                    font-size: px2v(25);
+                }
+            }
+        }
+    }
+}
