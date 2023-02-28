@@ -1,6 +1,6 @@
 .banner{
     @include size(1920,862);
-    background-image: url("/assets/banner.png");
+    background-image: url("./../assets/banner.png");
     margin-top: px2v(165);
     .banner_container{
         padding-left: px2v(89);
@@ -16,7 +16,7 @@
 @media screen and (max-width:480px){
     .banner{
         @include mobile_size(480,265);
-        background-image: url("/assets/mobile_banner.png");
+        background-image: url("./../assets/mobile_banner.png");
         margin-top: m_px2v(70);
         .banner_container{
             padding-left: m_px2v(36);

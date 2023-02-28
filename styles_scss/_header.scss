@@ -18,7 +18,7 @@ header{
             #menu_toggle, .menu_btn{
                 display: none;
             }
-            nav{
+            nav.header{
                 display: flex;
                 gap: px2v(90);
                 a{
@@ -78,7 +78,7 @@ header{
                         top: m_px2v(15);
                     }
                 }
-                .header{
+                nav.header{
                     display: block;
                     visibility: hidden;
                     position: fixed;
@@ -98,18 +98,17 @@ header{
                         @include mobile_font(400,18)
                     }
                 }
-                  #menu_toggle:checked ~ .menu_btn{
+                #menu_toggle:checked ~ .menu_btn{
                     span::before {
                     top: m_px2v(15);
                     transform: rotate(130deg);
                     border-top: 0;
-                  }
+                    }
                 }
-                  #menu_toggle:checked ~ .menu_btn{
-                        top: m_px2v(17);
-                        transform: rotate(45deg);
-                      }
-                  }
+                #menu_toggle:checked ~ .menu_btn{
+                    top: m_px2v(17);
+                    transform: rotate(45deg);
+                }
                 #menu_toggle:checked ~ .header {
                     visibility: visible;
                     left: 0;
@@ -117,5 +116,5 @@ header{
                 }
             }
         }
-    }   
+    }
 }
