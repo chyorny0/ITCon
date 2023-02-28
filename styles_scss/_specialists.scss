@@ -1,8 +1,8 @@
 .specialists{
-    @include section_size(1920,1022);
+    @include size(1920,1022);
     @include secondary_bc;
     .specialists_container{
-        @include container_75;
+        @include container(75%);
         .specialists_header{
             @include header;
             @include secondary_color;
@@ -12,24 +12,72 @@
             display: flex;
             gap: px2v(130);
             .specialists_column{
-                li{
-                    @include secondary_color;
-                    font-weight: 500;
-                    font-size: px2v(25);
+                // li{
+                //     @include secondary_color;
+                //     @include font(500,25);
+                //     margin-bottom: px2v(45);
+                // }
+                // li::before{
+                //     content:"";
+                //     display: inline-block;
+                //     @include size(20,20);
+                //     border-radius: 50%;
+                //     background-color: #fff;
+                //     margin-right: px2v(35);
+                // }
+                .li{
+                    display: flex;
+                    gap: px2v(35);
                     margin-bottom: px2v(45);
-                }
-                li::before{
-                    content:"";
-                    display: inline-block;
-                    width: px2v(20);
-                    height: px2v(20);
-                    border-radius: 50%;
-                    background-color: #fff;
-                    margin-right: px2v(35);
+                    .circle{
+                        flex-shrink: 0;
+                        display: inline-block;
+                        @include size(20,20);
+                        border-radius: 50%;
+                        background-color: #fff;
+                    }
+                    p{
+                        @include secondary_color;
+                        @include font(500,25);
+                    }
                 }
             }
             .specialists_column:first-child{
                 width: px2v(780);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    .specialists{
+        @include mobile_size(480,862);
+        .specialists_container{
+            @include container(90%);
+            .specialists_header{
+                @include mobile_header;
+                margin: m_px2v(36) 0 m_px2v(50);
+            }
+            .specialists_columns{
+                gap: 0;
+                flex-direction: column;
+                .specialists_column{
+                    .li{
+                        gap: m_px2v(35);
+                        margin-bottom: m_px2v(41);
+                        align-items: center;
+                        width: m_px2v(400);
+                        .circle{
+                            @include mobile_size(15,15);
+                        }
+                        p{
+                            @include mobile_font(500,18);
+                        }
+                    }
+                }
+                .specialists_column:first-child{
+                    width: inherit;
+                }
             }
         }
     }

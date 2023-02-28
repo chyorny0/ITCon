@@ -1,15 +1,5 @@
-@mixin container_90{
-    width: 90%;
-    margin: auto;
-}
-
-@mixin container_75{
-    width: 75%;
-    margin: auto;
-}
-
-@mixin container_85{
-    width: 85%;
+@mixin container($prc){
+    width: $prc;
     margin: auto;
 }
 
@@ -27,7 +17,28 @@
     text-align: center;
 }
 
-@mixin section_size($width,$height){
+@mixin size($width,$height){
     width: px2v($width);
     height: px2v($height);
+}
+
+@mixin font($weight,$size){
+    font-weight: $weight;
+    font-size: px2v($size);
+}
+
+@mixin mobile_font($weight,$size){
+    font-weight: $weight;
+    font-size: m_px2v($size);
+}
+
+@mixin mobile_size($width,$height){
+    width: m_px2v($width);
+    height: m_px2v($height);
+}
+
+@mixin mobile_header{
+    font-weight: 600;
+    font-size: m_px2v(20);
+    text-align: center;
 }

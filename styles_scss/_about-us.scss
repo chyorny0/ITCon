@@ -1,18 +1,18 @@
 .about-us{
-    @include section_size(1920,972);
+    @include size(1920,972);
     .about-us_container{
-        @include container_90;
+        @include container(90%);
         display: flex;
         gap: px2v(125);
         .about-us_info{
             width: 50%;
             .about-us_info_header{
                 @include header;
+                text-align: left;
                 margin: px2v(170) 0 px2v(40);
             }
             .about-us_info_content{
-                font-weight: 500;
-                font-size: px2v(27);
+                @include font(500,27)
             }
         }
         .about-us_partners{
@@ -24,37 +24,98 @@
             .about-us_partners_content{
                 display: flex;
                 flex-wrap: wrap;
-                img:nth-child(1n){
-                    width: px2v(270.51);
-                    height: px2v(101.69);
+                img:nth-child(1n){                    
+                    @include size(270.51,101.69);
                     margin-right: px2v(71.69);
                     margin-bottom: px2v(76.11);
                 }
                 img:nth-child(2n){
-                    width: px2v(172.56);
-                    height: px2v(93.68);
+                    @include size(172.56,93.68);
                     margin-right: px2v(71.69);
                     margin-bottom: px2v(80.29);
                 }
                 img:nth-child(3n){
-                    width: px2v(145.72);
-                    height: px2v(93.68);
+                    @include size(145.72,93.68);
                     margin-right: 0;
                     margin-bottom: px2v(88.9);
                 }
                 img:nth-child(4n){
-                    width: px2v(276.22);
-                    height: px2v(81.84);
+                    @include size(276.22,81.84);
                     margin-right: px2v(53.56);
                 }
                 img:nth-child(5n){
-                    width: px2v(195.96);
-                    height: px2v(82.21);
+                    @include size(195.96,82.21);
                     margin-right: px2v(41.1);
                 }
                 img:nth-child(6n){
-                    width: px2v(205.21);
-                    height: px2v(65.29);
+                    @include size(205.21,65.29);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .about-us{
+        @include mobile_size(480,820);
+        .about-us_container{
+            flex-direction: column;
+            gap: m_px2v(50);
+            .about-us_info{
+                width: 100%;
+                .about-us_info_header{
+                    @include mobile_header;
+                    text-align: left;
+                    margin: m_px2v(35) 0;
+                }
+                .about-us_info_content{
+                    @include mobile_font(500,17)
+                }
+            }
+            .about-us_partners{
+                width: 100%;
+                .about-us_partners_header{
+                    @include mobile_header;
+                    text-align: left;
+                    margin-bottom: m_px2v(40);
+                }
+                .about-us_partners_content{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    img:nth-child(1n){                 
+                        width: m_px2v(142.54);
+                        height: m_px2v(53.58);    
+                        margin-right: m_px2v(37.77);
+                        margin-bottom: m_px2v(40.1);
+                    }
+                    img:nth-child(2n){
+                        width: m_px2v(90.93);
+                        height: m_px2v(49.36);
+                        margin-right: m_px2v(37.78);
+                        margin-bottom: m_px2v(42.31);
+                    }
+                    img:nth-child(3n){
+                        width: m_px2v(76.78);
+                        height: m_px2v(49.36);
+                        margin-right: 0;
+                        margin-bottom: m_px2v(46.84);
+                    }
+                    img:nth-child(4n){
+                        width: m_px2v(145.55);
+                        height: m_px2v(43.12);
+                        margin-right: m_px2v(28.22);
+                    }
+                    img:nth-child(5n){
+                        width: m_px2v(103.25);
+                        height: m_px2v(43.32);
+                        margin-right: m_px2v(21.66);
+                    }
+                    img:nth-child(6n){
+                        width: m_px2v(111.82);
+                        height: m_px2v(34.4);
+                        margin-right: 0;
+                    }
                 }
             }
         }

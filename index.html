@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        function burger() {
+            let check = document.getElementById("menu_toggle");
+            let a = document.getElementsByClassName("line_effect");
+            if (check.checked) {
+                check.checked = false;
+            }
+        }
+    </script>
     <title>ITCon</title>
 </head>
 <body>
@@ -12,13 +21,17 @@
     <header>
         <div class="header_container">
             <img class="logo" src="assets/logo.png" alt="Логотип">
-            <nav class="header">
-                <a href="#about-us">О нас</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#guarantees">Наши гарантии</a>
-                <a href="#specialists">Специалисты</a>
-                <a href="#contacts">Связь с нами</a>
-            </nav>
+            <div class="hamburger-menu">
+                <input id="menu_toggle" type="checkbox" />
+                <label class="menu_btn" for="menu_toggle"><span></span></label>
+                <nav class="header">
+                    <a class="line_effect" onclick="burger()" href="#about-us">О нас</a>
+                    <a class="line_effect" onclick="burger()" href="#advantages">Преимущества</a>
+                    <a class="line_effect" onclick="burger()" href="#guarantees">Наши гарантии</a>
+                    <a class="line_effect" onclick="burger()" href="#specialists">Специалисты</a>
+                    <a class="line_effect" onclick="burger()" href="#contacts">Связь с нами</a>
+                </nav>
+            </div>        
         </div>
     </header>
 
@@ -109,21 +122,21 @@
         <div class="specialists_container">
             <h2 class="specialists_header">Опыт наших специалистов</h2>
             <div class="specialists_columns">
-                <ul class="specialists_column">
-                    <li>Разработка социальных приложений</li>
-                    <li>Проекты по отправке и обработке сообщений</li>
-                    <li>Gambling</li>
-                    <li>Интернет-коммерция</li>
-                    <li>Разработка мобильных приложений (social, dating)</li>
-                    <li>Обработка финансовых операций</li>
-                </ul>
-                <ul class="specialists_column">
-                    <li>Работа с ботами в telegram</li>
-                    <li>Интеграция с CRM (amo, bitrix24)</li>
-                    <li>Интеграция с платежными системами</li>
-                    <li>Интеграция с различными API</li>
-                    <li>Разработка API</li>
-                </ul>
+                <div class="specialists_column">
+                    <div class="li"><div class="circle"></div><p>Разработка социальных приложений</p></div>
+                    <div class="li"><div class="circle"></div><p>Проекты по отправке и обработке сообщений</p></div>
+                    <div class="li"><div class="circle"></div><p>Gambling</p></div>
+                    <div class="li"><div class="circle"></div><p>Интернет-коммерция</p></div>
+                    <div class="li"><div class="circle"></div><p>Разработка мобильных приложений (social, dating)</p></div>
+                    <div class="li"><div class="circle"></div><p>Обработка финансовых операций</p></div>
+                </div>
+                <div class="specialists_column">
+                    <div class="li"><div class="circle"></div><p>Работа с ботами в telegram</p></div>
+                    <div class="li"><div class="circle"></div><p>Интеграция с CRM (amo, bitrix24)</p></div>
+                    <div class="li"><div class="circle"></div><p>Интеграция с платежными системами</p></div>
+                    <div class="li"><div class="circle"></div><p>Интеграция с различными API</p></div>
+                    <div class="li"><div class="circle"></div><p>Разработка API</p></div>
+                </div>
             </div>
         </div>
     </div>
@@ -138,18 +151,18 @@
                 </div>
                 <div class="contact">
                     <h4 class="contact_header">Телефон:</h4>
-                    <a href="" class="contact_content">+7 927 557-98-64</a>
+                    <a target="_blank" href="tel:c" class="contact_content line_effect">+375(44)778-81-17</a>
                 </div>
                 <div class="contact">
                     <h4 class="contact_header">Почта:</h4>
-                    <a href="" class="contact_content">saenko.ns@yandex.by</a>
+                    <a target="_blank" href="mailto:saenko.ns@yandex.by" class="contact_content line_effect">saenko.ns@yandex.by</a>
                 </div>
                 <div class="contact">
                     <h4 class="contact_header">Наши соц.сети:</h4>
                     <div class="contact_content">
-                        <a href=""><img src="assets/social_wa.png" alt="WhatsApp"></a>
-                        <a href=""><img src="assets/social_tg.png" alt="Telegram"></a>
-                        <a href=""><img src="assets/social_vb.png" alt="Viber"></a>
+                        <a target="_blank" href="https://wa.me/79275579864" class="scale_effect"><img src="assets/social_wa.png" alt="WhatsApp"></a>
+                        <a target="_blank" href="https://t.me/+79275579864" class="scale_effect"><img src="assets/social_tg.png" alt="Telegram"></a>
+                        <a target="_blank" href="viber://chat?number=%2B79275579864" class="scale_effect"><img src="assets/social_vb.png" alt="Viber"></a>
                     </div>
                 </div>
             </div>
@@ -159,22 +172,23 @@
     <footer>
         <div class="footer_container">
             <div class="footer_info">
-                <div class="logo">
-                    <img src="assets/logo.png" alt="Логотип">
-                </div>
                 <div class="footer_pay">
-                    <p class="company-name">ООО «РоСа»</p>
-                    <p class="footer_pay_info">ОГРН 1226700020931, ИНН 6732238651, КПП 673201001.
-                        р/с 40702810159000019046 в ПАО Сбербанк, к/с 30101810000000000632, БИК: 046614632.</p>
+                    <a href="#"><img class="logo" src="assets/logo.png" alt="Логотип"></a>
+                    <p>ООО «РоСа»</p>
+                    <p>ОГРН 1226700020931, ИНН 6732238651, КПП 673201001.<br>р/с 40702810159000019046 в ПАО Сбербанк, к/с<br>30101810000000000632, БИК: 046614632.</p>
+                    <p class="compliment">Сайт был разработан группой студентов.</p>
                 </div>
-                <p class="compliment">Сайт был разработан группой студентов.</p>
             </div>
             <nav class="footer">
-                <a href="#about-us">О нас</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#guarantees">Наши гарантии</a>
-                <a href="#specialists">Специалисты</a>
-                <a href="#contants">Связь с нами</a>
+                <div class="nav_footer_column">
+                    <a class="line_effect" href="#about-us">О нас</a>
+                    <a class="line_effect" href="#advantages">Преимущества</a>
+                    <a class="line_effect" href="#guarantees">Наши гарантии</a>
+                </div>
+                <div class="nav_footer_column">
+                    <a class="line_effect" href="#specialists">Специалисты</a>
+                    <a class="line_effect" href="#contacts">Связь с нами</a>
+                </div>
             </nav>
         </div>
     </footer>

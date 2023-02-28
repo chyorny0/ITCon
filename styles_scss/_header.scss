@@ -1,23 +1,121 @@
 header{
-    margin: px2v(40) 0;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: px2v(165);
     .header_container{
-        @include container_90;
+        @include container(90%);
         color: #002361;
-        font-weight: 400;
-        font-size: px2v(27);
+        @include font(400,27);
         display: flex;
         align-items: center;
         gap: px2v(280);
+        margin-top: px2v(35);
         .logo{
-            height: px2v(90);
-            width: px2v(190);
+            @include size(190,90);
         }
-        nav{
-            display: flex;
-            gap: px2v(90);
-            a{
-                height: px2v(40);
+        .hamburger-menu{
+            #menu_toggle, .menu_btn{
+                display: none;
+            }
+            nav{
+                display: flex;
+                gap: px2v(90);
+                a{
+                    height: px2v(40);
+                }
             }
         }
     }
+}
+
+
+
+@media screen and (max-width:480px){
+    header{
+        @include mobile_size(480,70);
+        position: fixed;
+        background-color: #fff;
+        .header_container{
+            .logo{
+                @include mobile_size(85.88,40);
+                margin: m_px2v(6) 0 0 m_px2v(170);
+            } 
+            .hamburger-menu{
+                #menu_toggle, .menu_btn{
+                    display: block;
+                }
+                #menu_toggle {
+                    opacity: 0;
+                    }
+                .menu_btn{
+                    display: flex;
+                    align-items: center;
+                    position: fixed;
+                    left: m_px2v(31);
+                    top: m_px2v(20);
+                    width: m_px2v(50);
+                    height:m_px2v(30);
+                    overflow: hidden;
+                    span::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: m_px2v(50);
+                        height: m_px2v(18);
+                        border-top: m_px2v(3) solid #002361;
+                        border-bottom: m_px2v(3) solid #002361;
+                        top: m_px2v(5);
+                        transition-duration: .25s
+                    }
+                    span::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: m_px2v(50);
+                        transition-duration: .25s;
+                        border-top: m_px2v(3) solid #002361;
+                        top: m_px2v(15);
+                    }
+                }
+                .header{
+                    display: block;
+                    visibility: hidden;
+                    position: fixed;
+                    left: -100%;
+                    top: m_px2v(60);
+                    width: m_px2v(480);
+                    height: m_px2v(430);
+                    padding: m_px2v(40) 0;
+                    background-color: #fff;
+                    transition-duration: .25s;
+                    a{
+                        overflow-y: hidden;
+                        display: block;
+                        padding-bottom: m_px2v(40);
+                        padding-left: m_px2v(40);
+                        transition-duration: .25s;
+                        @include mobile_font(400,18)
+                    }
+                }
+                  #menu_toggle:checked ~ .menu_btn{
+                    span::before {
+                    top: m_px2v(15);
+                    transform: rotate(130deg);
+                    border-top: 0;
+                  }
+                }
+                  #menu_toggle:checked ~ .menu_btn{
+                        top: m_px2v(17);
+                        transform: rotate(45deg);
+                      }
+                  }
+                #menu_toggle:checked ~ .header {
+                    visibility: visible;
+                    left: 0;
+                    top:m_px2v(60);
+                }
+            }
+        }
+    }   
 }

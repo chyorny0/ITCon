@@ -1,0 +1,51 @@
+footer{
+    @include size(1920,530);
+    @include secondary_bc;
+    .footer_container{
+        @include container(85%);
+        display: flex;
+        gap: px2v(344);
+        .footer_info{
+            .logo{
+                @include size(190,90);
+                margin: px2v(88) 0 px2v(77);
+            }
+            .footer_pay{
+                p{
+                    @include font(500,25);
+                    @include secondary_color;
+                }
+                .compliment{
+                    @include font(500,15);
+                    margin-top: px2v(38);
+                }
+            }
+        }
+        nav{
+            display: flex;
+            gap: px2v(116);
+            margin-top: px2v(119);
+            a{
+                @include secondary_color;
+                @include font(500,30);
+                height: px2v(50);
+                margin-bottom: px2v(23);
+                &.line_effect:after{
+                    background-color: #fff;
+                }
+                &.line_effect:hover:after{
+                    background-color: #fff;
+                }
+            }
+            .nav_footer_column{
+                display: flex;
+                flex-direction: column;
+                &:first-child{
+                    a:first-child{
+                        width: px2v(85);
+                    }
+                }
+            }
+        }
+    }
+}

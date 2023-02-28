@@ -1,7 +1,7 @@
 .contacts{
-    @include section_size(1920,653);
+    @include size(1920,653);
     .contacts_container{
-        @include container_85;
+        @include container(85%);
         .contacts_header{
             @include header;
             margin: px2v(176) 0 px2v(90);
@@ -12,24 +12,24 @@
             margin-left: px2v(80);
             .contact{
                 .contact_header{
-                    font-weight: 600;
-                    font-size: px2v(25);
+                    @include font(600,25);
                     margin-bottom: px2v(15);
                 }
                 .contact_content{
                     overflow-y: hidden;
                     height: px2v(100);
-                    font-weight: 500;
-                    font-size: px2v(25);
+                    @include font(500,25);
                 }
             }
             .contact:last-of-type{
                 .contact_content{
                     display: flex;
                     gap: px2v(25);
+                    align-items: center;
+                    margin-top: px2v(-30);
                     img{
-                        width: px2v(35);
-                        height: px2v(35);
+                        @include size(35,35);
+                        margin-left: px2v(5);
                     }
                 }   
             }
